@@ -3,12 +3,56 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Buğra Mete Tura</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buğra Mete Tura | Yazılım Geliştirici</title>
+    <!-- CSS Dosyamızı HTML'e bağlıyoruz -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Merhaba, Ben [Buğra Mete Tura]!</h1>
-    <p>Bu benim git hub web sitem ve burada kendi biyografimi paylaşacağım.</p>
+
+    <!-- Üst Menü (Navbar) Kısmı -->
+    <nav class="navbar">
+        <div class="logo">Buğra Mete Tura</div>
+        <ul class="nav-links">
+            <li><a href="#home">#ana-sayfa</a></li>
+            <li><a href="#about-me">#hakkımda</a></li>
+            <li><a href="#skills">#yetenekler</a></li>
+            <li><a href="#projects">#projeler</a></li>
+        </ul>
+    </nav>
+
+    <!-- Ana Giriş (Hero) Kısmı -->
+    <section id="home" class="hero-section">
+
+        <!-- Sol Taraf: Yazılar ve Buton -->
+        <div class="hero-content">
+            <h1 class="hero-title">Buğra Mete Tura,</h1>
+            <!-- Turkuaz rengi sadece 'Web Tasarımcısı' kısmına uygulamak için span kullandık -->
+            <h2 class="hero-subtitle">Yazılım Geliştirici ve <span class="highlight">Web Tasarımcısı</span></h2>
+            <p class="hero-desc">C#, SQL, HTML ve CSS ile arka planda güçlü, ön yüzde şık projeler geliştiriyorum.</p>
+            <a href="#contact" class="btn-primary">İletişime Geç!</a>
+        </div>
+
+        <!-- Sağ Taraf: Şekilli Kod Kutusu -->
+        <div class="hero-code-box">
+            <!-- Pencere düğmeleri (Kırmızı, Sarı, Yeşil noktalar) -->
+            <div class="dots">
+                <span></span><span></span><span></span>
+            </div>
+            <!-- Kod Görünümlü Metin -->
+            <pre><code>
+// Geliştirici Profili
+const developer = {
+    name: "Buğra Mete Tura",
+    skills: ["C#", "MSSQL", "HTML", "CSS"],
+    passion: "Backend Development & Web Design"
+};
+            </code></pre>
+        </div>
+
+    </section>
+
 </body>
 
 </html>

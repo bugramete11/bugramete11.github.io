@@ -1,0 +1,170 @@
+/* ===== GENEL AYARLAR ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Kutuların taşmasını engeller */
+}
+
+body {
+    background-color: #0f172a;
+    /* Derin Gece Mavisi Arka Plan */
+    color: #e2e8f0;
+    /* Açık gri metin rengi (Göz yormaması için beyaz yerine) */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Modern yazı tipi */
+    line-height: 1.6;
+}
+
+/* ===== VURGU (NEON) RENGİ ===== */
+.highlight {
+    color: #06b6d4;
+    /* Turkuaz/Cyan vurgu rengi */
+    font-weight: bold;
+}
+
+/* ===== ÜST MENÜ (NAVBAR) ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* Logoyu sola, menüyü sağa atar */
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #0f172a;
+    border-bottom: 1px solid #1e293b;
+    /* Alt kısma ince bir çizgi ekledik */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-links {
+    list-style: none;
+    /* Noktaları gizler */
+    display: flex;
+    gap: 30px;
+    /* Menü elemanları arasındaki boşluk */
+}
+
+.nav-links a {
+    text-decoration: none;
+    /* Linklerin alt çizgisini kaldırır */
+    color: #94a3b8;
+    /* Soluk gri */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    /* Renk değişimini yumuşatır */
+}
+
+/* Farenin ucu linkin üzerine gelince ne olsun? */
+.nav-links a:hover {
+    color: #06b6d4;
+    /* Üzerine gelince turkuaz parlar */
+}
+
+/* ===== ANA GİRİŞ (HERO KISMI) ===== */
+.hero-section {
+    display: flex;
+    /* İçindeki elemanları yan yana dizer */
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+    max-width: 1100px;
+    /* İçerik ekranın çok kenarlarına yapışmasın */
+    margin: 0 auto;
+    /* Sayfayı ortalar */
+}
+
+.hero-content {
+    max-width: 50%;
+    /* Sol taraf ekranın yarısını kaplasın */
+}
+
+.hero-title {
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.hero-desc {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #94a3b8;
+}
+
+/* ===== BUTON TASARIMI ===== */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 2px solid #06b6d4;
+    /* Turkuaz çerçeve */
+    color: #06b6d4;
+    /* Turkuaz yazı */
+    text-decoration: none;
+    background-color: transparent;
+    /* İçi boş */
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #06b6d4;
+    /* Üzerine gelince içi turkuaz dolar */
+    color: #0f172a;
+    /* Yazı lacivert olur */
+}
+
+/* ===== KOD KUTUSU (SAĞ TARAF) ===== */
+.hero-code-box {
+    background-color: #1e293b;
+    /* Kutu içi bir tık daha açık lacivert */
+    padding: 20px;
+    border-radius: 8px;
+    /* Köşeleri yuvarlattık */
+    border: 1px solid #334155;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    /* Hafif gölge efekti */
+    min-width: 400px;
+}
+
+/* Pencere düğmeleri tasarımı */
+.dots span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    /* Yuvarlak yapar */
+    margin-right: 8px;
+}
+
+.dots span:nth-child(1) {
+    background-color: #ef4444;
+}
+
+/* Kırmızı */
+.dots span:nth-child(2) {
+    background-color: #eab308;
+}
+
+/* Sarı */
+.dots span:nth-child(3) {
+    background-color: #22c55e;
+}
+
+/* Yeşil */
+
+pre code {
+    display: block;
+    margin-top: 20px;
+    color: #a5b4fc;
+    /* Kod metni için soluk mor/mavi bir ton */
+    font-family: 'Courier New', Courier, monospace;
+    /* Gerçek kod fontu */
+    font-size: 1rem;
+}
