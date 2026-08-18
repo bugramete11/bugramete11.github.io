@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buğra Mete Tura | Yazılım Geliştirici</title>
+    <title>Buğra Mete Tura | Yazılım ve Web Geliştirici</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -43,16 +43,16 @@
         </header>
 
         <section class="about hidden">
-            <h2><i class="fas fa-terminal"></i> Hakkımda</h2>
+            <h2><i class="fa-solid fa-circle-info"></i> Hakkımda</h2>
 
             <!-- Animasyonu tetikleyecek div -->
             <div class="animated-text">
                 <p>Merhaba! Bilecik Şeyh Edebali Üniversitesi, Pazaryeri Meslek Yüksekokulu'nda Web Tasarım ve Kodlama
                     öğrencisiyim. Yazılım dünyasına büyük bir hevesle adım attım. Arka planda güçlü veritabanları
                     kurarken, ön yüzde temiz tasarımlar oluşturmayı seviyorum.</p>
-                <p>Bilgisayar başından kalktığımda ise <strong>koyu bir fanatik Beşiktaşlı</strong> olarak futbolu
-                    yakından takip ediyorum. Aynı zamanda futbol tarihinin en iyisi olduğuna inandığım <strong>Cristiano
-                        Ronaldo'nun</strong> büyük bir hayranıyım. Rekabetçi ruhumu dijital dünyaya da taşıyorum; PES,
+                <p>Bilgisayar başından kalktığımda ise koyu bir fanatik Beşiktaşlı olarak futbolu
+                    yakından takip ediyorum. Aynı zamanda futbol tarihinin en iyisi olduğuna inandığım Cristiano
+                    Ronaldo'nun büyük bir hayranıyım. Rekabetçi ruhumu dijital dünyaya da taşıyorum; PES,
                     FIFA gibi oyunların yanı sıra Valorant ve CS gibi rekabetçi oyunlarda da oldukça iddialıyım.</p>
             </div>
         </section>
@@ -120,6 +120,69 @@
                     </a>
                 </div>
 
+            </div>
+
+        </section>
+        <!-- ZİYARETÇİ BİLGİLERİ BÖLÜMÜ -->
+        <section class="visitor-section hidden" id="visitor-info">
+            <h2><i class="fa-solid fa-eye"></i> Ziyaretçi Bilgileri</h2>
+
+            <div class="visitor-grid">
+                <!-- IP Adresi -->
+                <div class="visitor-card">
+                    <i class="fas fa-globe"></i>
+                    <span class="v-label">IP ADRESİ</span>
+                    <span class="v-value" id="visitor-ip">Yükleniyor...</span>
+                </div>
+
+                <!-- Konum -->
+                <div class="visitor-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="v-label">KONUM</span>
+                    <span class="v-value" id="visitor-location">Yükleniyor...</span>
+                </div>
+
+                <!-- Tarayıcı -->
+                <div class="visitor-card">
+                    <i class="fas fa-compass"></i>
+                    <span class="v-label">TARAYICI</span>
+                    <span class="v-value" id="visitor-browser">Tespit ediliyor...</span>
+                </div>
+
+                <!-- Cihaz -->
+                <div class="visitor-card">
+                    <i class="fas fa-desktop"></i>
+                    <span class="v-label">CİHAZ</span>
+                    <span class="v-value" id="visitor-device">Tespit ediliyor...</span>
+                </div>
+
+                <!-- İşletim Sistemi -->
+                <div class="visitor-card">
+                    <i class="fas fa-laptop"></i>
+                    <span class="v-label">İŞLETİM SİSTEMİ</span>
+                    <span class="v-value" id="visitor-os">Tespit ediliyor...</span>
+                </div>
+
+                <!-- Ekran Çözünürlüğü -->
+                <div class="visitor-card">
+                    <i class="fas fa-expand"></i>
+                    <span class="v-label">EKRAN</span>
+                    <span class="v-value" id="visitor-screen">1920 × 1080</span>
+                </div>
+
+                <!-- Ziyaret Sayısı -->
+                <div class="visitor-card">
+                    <i class="fas fa-eye"></i>
+                    <span class="v-label">ZİYARET SAYISI</span>
+                    <span class="v-value" id="visitor-count">1</span>
+                </div>
+
+                <!-- İlk Ziyaret / Tarih -->
+                <div class="visitor-card">
+                    <i class="fas fa-clock"></i>
+                    <span class="v-label">İLK ZİYARET</span>
+                    <span class="v-value" id="visitor-date">18.08.2026</span>
+                </div>
             </div>
         </section>
         <section class="contact-section hidden">
@@ -271,6 +334,7 @@
             document.getElementById('game-score').innerText = score;
         }
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
