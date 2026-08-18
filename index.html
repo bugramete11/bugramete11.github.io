@@ -11,6 +11,12 @@
 
 <body class="dark-mode">
 
+    <!-- ARKA PLAN VE IŞIKLAR -->
+    <div class="bg-image"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="bg-animation" id="bg-animation"></div>
+
     <!-- TEMA PANELİ -->
     <div class="theme-panel">
         <div class="mode-switches">
@@ -27,27 +33,30 @@
         </div>
     </div>
 
+    <!-- ANA İÇERİK -->
     <div class="container">
 
         <header class="profile-header">
-            <img src="profil.jpg" alt="Buğra Mete Tura" class="profile-img">
+            <img src="profilfoto.jpg" alt="Buğra Mete Tura" class="profile-img">
             <h1>Buğra Mete Tura</h1>
-            <!-- Daktilo efekti için span etiketleri ekledik -->
             <p class="title"><span id="typewriter-text"></span><span class="cursor">|</span></p>
         </header>
 
-        <!-- Animasyon için section'lara 'hidden' sınıfı ekledik -->
         <section class="about hidden">
             <h2><i class="fas fa-terminal"></i> Hakkımda</h2>
-            <p>Merhaba! Bilecik Şeyh Edebali Üniversitesi, Pazaryeri Meslek Yüksekokulu'nda Web Tasarım ve Kodlama
-                öğrencisiyim. Yazılım dünyasına büyük bir hevesle adım attım. Arka planda güçlü veritabanları kurarken,
-                ön yüzde temiz tasarımlar oluşturmayı seviyorum.</p>
-            <p>Bilgisayar başından kalktığımda ise <strong>koyu bir fanatik Beşiktaşlı</strong> olarak futbolu yakından
-                takip ediyorum. Aynı zamanda futbol tarihinin en iyisi olduğuna inandığım <strong>Cristiano
-                    Ronaldo'nun</strong> büyük bir hayranıyım. Rekabetçi ruhumu dijital dünyaya da taşıyorum; PES, FIFA
-                gibi oyunların yanı sıra Valorant ve CS gibi rekabetçi oyunlarda da oldukça iddialıyım.</p>
-        </section>
 
+            <!-- Animasyonu tetikleyecek div -->
+            <div class="animated-text">
+                <p>Merhaba! Bilecik Şeyh Edebali Üniversitesi, Pazaryeri Meslek Yüksekokulu'nda Web Tasarım ve Kodlama
+                    öğrencisiyim. Yazılım dünyasına büyük bir hevesle adım attım. Arka planda güçlü veritabanları
+                    kurarken, ön yüzde temiz tasarımlar oluşturmayı seviyorum.</p>
+                <p>Bilgisayar başından kalktığımda ise <strong>koyu bir fanatik Beşiktaşlı</strong> olarak futbolu
+                    yakından takip ediyorum. Aynı zamanda futbol tarihinin en iyisi olduğuna inandığım <strong>Cristiano
+                        Ronaldo'nun</strong> büyük bir hayranıyım. Rekabetçi ruhumu dijital dünyaya da taşıyorum; PES,
+                    FIFA gibi oyunların yanı sıra Valorant ve CS gibi rekabetçi oyunlarda da oldukça iddialıyım.</p>
+            </div>
+        </section>
+        <!-- YETENEKLER KISMI (Eski Şık Haline Döndü) -->
         <section class="skills hidden">
             <h2><i class="fas fa-code"></i> Teknik Yetenekler</h2>
             <div class="skill-tags">
@@ -63,108 +72,135 @@
             <h2><i class="fas fa-layer-group"></i> Projelerim</h2>
             <div class="project-grid">
 
+                <!-- 1. FARKLI RENGİ BULMA OYUNU -->
                 <div class="project-card">
                     <h3>Farklı Rengi Bulma Oyunu</h3>
-                    <p>JavaScript ile geliştirmekte olduğum yeni projem. Kullanıcının ekrandaki kareler arasından farklı
-                        renk tonuna sahip olanı bulmaya çalıştığı, refleks ve görsel algıyı ölçen eğlenceli bir web
-                        oyunu.</p>
+                    <p style="margin-bottom: 12px;">JavaScript ile geliştirdiğim projemin <strong>tarayıcı içi basit
+                            örneği.</strong> <br><small style="opacity: 0.7;">(Gelişmiş tam sürüm kodları
+                            aşağıda.)</small></p>
+
+                    <div class="project-buttons">
+                        <button class="play-btn" onclick="openGame()">Basit Sürümü Oyna</button>
+                        <!-- Gelişmiş sürümün GitHub Linki -->
+                        <a href="https://github.com/bugramete11/Farkli_Rengi_Bulma_Oyunu" target="_blank"
+                            class="github-repo-btn">
+                            <i class="fab fa-github"></i> GitHub'da İncele
+                        </a>
+                    </div>
                 </div>
 
+                <!-- 2. OTOPARK TAKİP SİSTEMİ -->
                 <div class="project-card">
                     <h3>Otopark Takip Sistemi</h3>
-                    <p>Araç giriş-çıkışlarını yöneten sistem. C# ve MSSQL veritabanı entegrasyonu ile geliştiriyorum.
-                    </p>
+                    <p style="margin-bottom: 15px;">Araç giriş-çıkışlarını yöneten sistem. C# ve MSSQL veritabanı
+                        entegrasyonu ile geliştiriyorum.</p>
+                    <a href="https://github.com/bugramete11/OTOPARK-TAKIP-SISTEMI-CSharp-SQL" target="_blank"
+                        class="github-repo-btn">
+                        <i class="fab fa-github"></i> GitHub'da İncele
+                    </a>
                 </div>
 
+                <!-- 3. DİNAMİK ALGORİTMALAR -->
                 <div class="project-card">
                     <h3>Dinamik Algoritmalar</h3>
-                    <p>Kullanıcının girdiği sayıya göre çalışan dinamik Fibonacci dizisi ve 1-100 arası asal sayıları
-                        yan yana yazdıran C# konsol uygulamaları.</p>
+                    <p style="margin-bottom: 15px;">Kullanıcının girdiği sayıya göre çalışan dinamik Fibonacci dizisi ve
+                        1-100 arası asal sayıları yan yana yazdıran C# uygulamaları.</p>
+                    <a href="https://github.com/bugramete11/Asal_Sayilar" target="_blank" class="github-repo-btn">
+                        <i class="fab fa-github"></i> GitHub'da İncele
+                    </a>
                 </div>
 
+                <!-- 4. GELİŞMİŞ HESAP MAKİNESİ -->
                 <div class="project-card">
                     <h3>Gelişmiş Hesap Makinesi</h3>
-                    <p>Üçgen ve daire alanı hesaplayabilen, özel kök alma işlemleri yapabilen C# hesap makinesi.</p>
+                    <p style="margin-bottom: 15px;">Üçgen ve daire alanı hesaplayabilen, özel kök alma işlemleri
+                        yapabilen C# hesap makinesi.</p>
+                    <a href="https://github.com/bugramete11/Hesap_Makinesi" target="_blank" class="github-repo-btn">
+                        <i class="fab fa-github"></i> GitHub'da İncele
+                    </a>
                 </div>
+
             </div>
         </section>
-
         <section class="contact-section hidden">
             <div class="contact-left">
                 <p>Benimle iletişime geçmek için aşağıdaki kanalları kullanabilirsiniz.</p>
             </div>
-
             <div class="contact-right">
                 <div class="contact-box">
                     <h3>İletişim Bilgileri</h3>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <a href="mailto:bugramete11@gmail.com">bugramete11@gmail.com</a>
+                        <a href="bugratura11x@gmail.com">bugratura11x@gmail.com</a>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <a href="https://maps.google.com/?q=Pazaryeri,Bilecik,Türkiye" target="_blank">Bilecik
                             Pazaryeri, Türkiye</a>
                     </div>
+                    <!-- En güncel FontAwesome v6 -->
+                    <link rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-                    <h3 class="social-title">Sosyal Medya</h3>
                     <div class="social-icons">
-                        <a href="SENIN_GITHUB_LINKIN" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="SENIN_LINKEDIN_LINKIN" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="SENIN_INSTAGRAM_LINKIN" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="SENIN_TIKTOK_LINKIN" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <!-- GitHub -->
+                        <a href="https://github.com/bugramete11" target="_blank" class="social-tooltip"
+                            data-tooltip="GitHub: bugramete11">
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/bugramete_" target="_blank" class="social-tooltip"
+                            data-tooltip="Instagram: @bugramete_">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <!-- TikTok -->
+                        <a href="https://www.tiktok.com/@bugramete_" target="_blank" class="social-tooltip"
+                            data-tooltip="TikTok: @bugramete_">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+
+                        <!-- Steam -->
+                        <a href="https://steamcommunity.com/profiles/76561199144981296/" target="_blank"
+                            class="social-tooltip" data-tooltip="steam: @bugra_mt">
+                            <i class="fab fa-steam"></i>
+                        </a>
+
+
                     </div>
                 </div>
-            </div>
         </section>
 
     </div>
 
     <footer>
         <div class="footer-content">
-            <div class="footer-info">
-                <strong>Buğra Mete Tura</strong><br>
-                <span>bugramete11@gmail.com</span>
-            </div>
-            <div class="footer-copy">
-                © 2026 Buğra Mete Tura. Tüm hakları saklıdır.
-            </div>
+            <div class="footer-info"><strong>Buğra Mete Tura</strong><br><span>bugramete11@gmail.com</span></div>
+            <div class="footer-copy">© 2026 Buğra Mete Tura. Tüm hakları saklıdır.</div>
         </div>
     </footer>
 
-    <!-- GELİŞTİRİLMİŞ JAVASCRIPT MOTORU -->
+    <!-- TEMİZLENMİŞ JAVASCRIPT MOTORU -->
     <script>
-        // 1. Mod Değiştirme (Aydınlık modda renklerin ezilmemesi için düzeltildi)
         function setMode(mode) {
             if (mode === 'dark') {
-                document.body.classList.remove('light-mode');
-                document.body.classList.add('dark-mode');
+                document.body.classList.remove('light-mode'); document.body.classList.add('dark-mode');
             } else {
-                document.body.classList.remove('dark-mode');
-                document.body.classList.add('light-mode');
+                document.body.classList.remove('dark-mode'); document.body.classList.add('light-mode');
             }
         }
+        function setColor(colorCode) { document.documentElement.style.setProperty('--accent-color', colorCode); }
 
-        // 2. Ana vurgu rengini değiştirme
-        function setColor(colorCode) {
-            document.documentElement.style.setProperty('--accent-color', colorCode);
-        }
-
-        // 3. Daktilo Efekti (Typewriter)
         const textToType = "Web Tasarım ve Kodlama Öğrencisi";
-        let i = 0;
-        const speed = 100; // Yazma hızı (milisaniye)
-
+        let i = 0; const speed = 100;
         function typeWriter() {
             if (i < textToType.length) {
                 document.getElementById("typewriter-text").innerHTML += textToType.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
+                i++; setTimeout(typeWriter, speed);
             }
         }
 
-        // 4. Aşağı Kaydırma Animasyonları (Scroll Reveal)
-        // Ekranda görünen '.hidden' sınıfına sahip öğelere '.show' sınıfını ekler
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
@@ -172,14 +208,68 @@
                 }
             });
         });
-
         const hiddenElements = document.querySelectorAll('.hidden');
         hiddenElements.forEach((el) => observer.observe(el));
 
-        // Sayfa yüklendiğinde daktilo efektini başlat
+        function createFloatingCodes() {
+            const bgContainer = document.getElementById('bg-animation');
+            const codes = [
+                'Console.WriteLine();', 'public void CalculateArea()', 'List<int> fibonacci', 'if (isPrime)', 'int sayi = Convert.ToInt32();', 'string plaka;',
+                'SELECT * FROM Araclar;', 'INSERT INTO Otopark', 'WHERE Durum = 1', 'INNER JOIN', 'ORDER BY Tarih DESC',
+                '<!DOCTYPE html>', '<div class="container">', '<section class="projects">', '<img>', '</a>',
+                'display: flex;', 'grid-template-columns: 1fr;', 'justify-content: center;', 'color: var(--accent-color);', 'align-items: center;'
+            ];
+            for (let i = 0; i < 35; i++) {
+                const snippet = document.createElement('div');
+                snippet.classList.add('code-snippet');
+                snippet.innerText = codes[Math.floor(Math.random() * codes.length)];
+                snippet.style.left = Math.random() * 100 + 'vw';
+                snippet.style.animationDuration = (Math.random() * 15 + 15) + 's';
+                snippet.style.animationDelay = '-' + (Math.random() * 30) + 's';
+                const size = Math.random() * 1.5 + 0.8; snippet.style.fontSize = size + 'rem';
+                if (size < 1.2) { snippet.style.filter = 'blur(4px)'; } else if (size < 1.8) { snippet.style.filter = 'blur(1px)'; } else { snippet.style.filter = 'blur(0px)'; }
+                bgContainer.appendChild(snippet);
+            }
+        }
+
         window.onload = () => {
             typeWriter();
+            createFloatingCodes();
         };
+    </script>
+    <!-- OYUN PENCERESİ (MODAL) -->
+    <div id="game-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeGame()"><i class="fas fa-times"></i></button>
+            <h2 style="margin-bottom: 10px; border:none; justify-content:center;">Farklı Rengi Bul!</h2>
+            <p class="game-score-text">Skor: <span id="game-score">0</span></p>
+            <div id="game-board" class="game-board"></div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('game-modal');
+        function openGame() { modal.classList.add('active'); score = 0; updateGame(); }
+        function closeGame() { modal.classList.remove('active'); }
+
+        // Basit Oyun Motoru
+        let score = 0;
+        function updateGame() {
+            const board = document.getElementById('game-board');
+            board.innerHTML = '';
+            let gridSize = 4; // Basit 4x4
+            board.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+            let target = Math.floor(Math.random() * 16);
+            let r = 100, g = 100, b = 200;
+            for (let i = 0; i < 16; i++) {
+                let box = document.createElement('div');
+                box.className = 'game-box';
+                box.style.backgroundColor = (i === target) ? `rgb(${r + 30}, ${g + 30}, ${b + 30})` : `rgb(${r}, ${g}, ${b})`;
+                box.onclick = () => { if (i === target) { score++; updateGame(); } else { alert('Yanlış! Skor: ' + score); score = 0; updateGame(); } };
+                board.appendChild(box);
+            }
+            document.getElementById('game-score').innerText = score;
+        }
     </script>
 </body>
 
