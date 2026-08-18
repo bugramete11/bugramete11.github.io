@@ -5,54 +5,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buğra Mete Tura | Yazılım Geliştirici</title>
-    <!-- CSS Dosyamızı HTML'e bağlıyoruz -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body>
+<body class="dark-mode">
 
-    <!-- Üst Menü (Navbar) Kısmı -->
-    <nav class="navbar">
-        <div class="logo">Buğra Mete Tura</div>
-        <ul class="nav-links">
-            <li><a href="#home">#ana-sayfa</a></li>
-            <li><a href="#about-me">#hakkımda</a></li>
-            <li><a href="#skills">#yetenekler</a></li>
-            <li><a href="#projects">#projeler</a></li>
-        </ul>
-    </nav>
-
-    <!-- Ana Giriş (Hero) Kısmı -->
-    <section id="home" class="hero-section">
-
-        <!-- Sol Taraf: Yazılar ve Buton -->
-        <div class="hero-content">
-            <h1 class="hero-title">Buğra Mete Tura,</h1>
-            <!-- Turkuaz rengi sadece 'Web Tasarımcısı' kısmına uygulamak için span kullandık -->
-            <h2 class="hero-subtitle">Yazılım Geliştirici ve <span class="highlight">Web Tasarımcısı</span></h2>
-            <p class="hero-desc">C#, SQL, HTML ve CSS ile arka planda güçlü, ön yüzde şık projeler geliştiriyorum.</p>
-            <a href="#contact" class="btn-primary">İletişime Geç!</a>
+    <!-- TEMA PANELİ -->
+    <div class="theme-panel">
+        <div class="mode-switches">
+            <button onclick="setMode('dark')" title="Karanlık Mod"><i class="fas fa-moon"></i></button>
+            <button onclick="setMode('light')" title="Aydınlık Mod"><i class="fas fa-sun"></i></button>
         </div>
+        <div class="color-palette">
+            <button onclick="setColor('#3b82f6')" style="background: #3b82f6;" title="Mavi"></button>
+            <button onclick="setColor('#ef4444')" style="background: #ef4444;" title="Kırmızı"></button>
+            <button onclick="setColor('#22c55e')" style="background: #22c55e;" title="Yeşil"></button>
+            <button onclick="setColor('#eab308')" style="background: #eab308;" title="Sarı"></button>
+            <button onclick="setColor('#f97316')" style="background: #f97316;" title="Turuncu"></button>
+            <button onclick="setColor('#a855f7')" style="background: #a855f7;" title="Mor"></button>
+        </div>
+    </div>
 
-        <!-- Sağ Taraf: Şekilli Kod Kutusu -->
-        <div class="hero-code-box">
-            <!-- Pencere düğmeleri (Kırmızı, Sarı, Yeşil noktalar) -->
-            <div class="dots">
-                <span></span><span></span><span></span>
+    <div class="container">
+
+        <header class="profile-header">
+            <img src="profil.jpg" alt="Buğra Mete Tura" class="profile-img">
+            <h1>Buğra Mete Tura</h1>
+            <!-- Daktilo efekti için span etiketleri ekledik -->
+            <p class="title"><span id="typewriter-text"></span><span class="cursor">|</span></p>
+        </header>
+
+        <!-- Animasyon için section'lara 'hidden' sınıfı ekledik -->
+        <section class="about hidden">
+            <h2><i class="fas fa-terminal"></i> Hakkımda</h2>
+            <p>Merhaba! Bilecik Şeyh Edebali Üniversitesi, Pazaryeri Meslek Yüksekokulu'nda Web Tasarım ve Kodlama
+                öğrencisiyim. Yazılım dünyasına büyük bir hevesle adım attım. Arka planda güçlü veritabanları kurarken,
+                ön yüzde temiz tasarımlar oluşturmayı seviyorum.</p>
+            <p>Bilgisayar başından kalktığımda ise <strong>koyu bir fanatik Beşiktaşlı</strong> olarak futbolu yakından
+                takip ediyorum. Aynı zamanda futbol tarihinin en iyisi olduğuna inandığım <strong>Cristiano
+                    Ronaldo'nun</strong> büyük bir hayranıyım. Rekabetçi ruhumu dijital dünyaya da taşıyorum; PES, FIFA
+                gibi oyunların yanı sıra Valorant ve CS gibi rekabetçi oyunlarda da oldukça iddialıyım.</p>
+        </section>
+
+        <section class="skills hidden">
+            <h2><i class="fas fa-code"></i> Teknik Yetenekler</h2>
+            <div class="skill-tags">
+                <span>&lt;HTML5 /&gt;</span>
+                <span>{ CSS3 }</span>
+                <span>C#</span>
+                <span>MSSQL</span>
+                <span>Figma</span>
             </div>
-            <!-- Kod Görünümlü Metin -->
-            <pre><code>
-// Geliştirici Profili
-const developer = {
-    name: "Buğra Mete Tura",
-    skills: ["C#", "MSSQL", "HTML", "CSS"],
-    passion: "Backend Development & Web Design"
-};
-            </code></pre>
+        </section>
+
+        <section class="projects hidden">
+            <h2><i class="fas fa-layer-group"></i> Projelerim</h2>
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <h3>Farklı Rengi Bulma Oyunu</h3>
+                    <p>JavaScript ile geliştirmekte olduğum yeni projem. Kullanıcının ekrandaki kareler arasından farklı
+                        renk tonuna sahip olanı bulmaya çalıştığı, refleks ve görsel algıyı ölçen eğlenceli bir web
+                        oyunu.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Otopark Takip Sistemi</h3>
+                    <p>Araç giriş-çıkışlarını yöneten sistem. C# ve MSSQL veritabanı entegrasyonu ile geliştiriyorum.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Dinamik Algoritmalar</h3>
+                    <p>Kullanıcının girdiği sayıya göre çalışan dinamik Fibonacci dizisi ve 1-100 arası asal sayıları
+                        yan yana yazdıran C# konsol uygulamaları.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Gelişmiş Hesap Makinesi</h3>
+                    <p>Üçgen ve daire alanı hesaplayabilen, özel kök alma işlemleri yapabilen C# hesap makinesi.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section hidden">
+            <div class="contact-left">
+                <p>Benimle iletişime geçmek için aşağıdaki kanalları kullanabilirsiniz.</p>
+            </div>
+
+            <div class="contact-right">
+                <div class="contact-box">
+                    <h3>İletişim Bilgileri</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:bugramete11@gmail.com">bugramete11@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://maps.google.com/?q=Pazaryeri,Bilecik,Türkiye" target="_blank">Bilecik
+                            Pazaryeri, Türkiye</a>
+                    </div>
+
+                    <h3 class="social-title">Sosyal Medya</h3>
+                    <div class="social-icons">
+                        <a href="SENIN_GITHUB_LINKIN" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="SENIN_LINKEDIN_LINKIN" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="SENIN_INSTAGRAM_LINKIN" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="SENIN_TIKTOK_LINKIN" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <strong>Buğra Mete Tura</strong><br>
+                <span>bugramete11@gmail.com</span>
+            </div>
+            <div class="footer-copy">
+                © 2026 Buğra Mete Tura. Tüm hakları saklıdır.
+            </div>
         </div>
+    </footer>
 
-    </section>
+    <!-- GELİŞTİRİLMİŞ JAVASCRIPT MOTORU -->
+    <script>
+        // 1. Mod Değiştirme (Aydınlık modda renklerin ezilmemesi için düzeltildi)
+        function setMode(mode) {
+            if (mode === 'dark') {
+                document.body.classList.remove('light-mode');
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+                document.body.classList.add('light-mode');
+            }
+        }
 
+        // 2. Ana vurgu rengini değiştirme
+        function setColor(colorCode) {
+            document.documentElement.style.setProperty('--accent-color', colorCode);
+        }
+
+        // 3. Daktilo Efekti (Typewriter)
+        const textToType = "Web Tasarım ve Kodlama Öğrencisi";
+        let i = 0;
+        const speed = 100; // Yazma hızı (milisaniye)
+
+        function typeWriter() {
+            if (i < textToType.length) {
+                document.getElementById("typewriter-text").innerHTML += textToType.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        // 4. Aşağı Kaydırma Animasyonları (Scroll Reveal)
+        // Ekranda görünen '.hidden' sınıfına sahip öğelere '.show' sınıfını ekler
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+
+        // Sayfa yüklendiğinde daktilo efektini başlat
+        window.onload = () => {
+            typeWriter();
+        };
+    </script>
 </body>
 
 </html>
