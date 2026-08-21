@@ -75,8 +75,8 @@
                 <!-- 1. FARKLI RENGİ BULMA OYUNU -->
                 <div class="project-card">
                     <h3>Farklı Rengi Bulma Oyunu</h3>
-                    <p style="margin-bottom: 12px;">JavaScript ile geliştirdiğim projemin <strong>tarayıcı içi basit
-                            örneği.</strong> <br><small style="opacity: 0.7;">(Gelişmiş tam sürüm kodları
+                    <p style="margin-bottom: 12px;">JavaScript ile geliştirdiğim projemin tarayıcı içi basit
+                        örneği. <br><small style="opacity: 0.7;">(Gelişmiş tam sürüm kodları
                             aşağıda.)</small></p>
 
                     <div class="project-buttons">
@@ -113,127 +113,140 @@
                 <!-- 4. GELİŞMİŞ HESAP MAKİNESİ -->
                 <div class="project-card">
                     <h3>Gelişmiş Hesap Makinesi</h3>
-                    <p style="margin-bottom: 15px;">Üçgen ve daire alanı hesaplayabilen, özel kök alma işlemleri
+                    <p style="margin-bottom: 15px;">Üçgen ve daire alanı hesaplayabilen, özel kök alma işlemleri ve dört
+                        işlem
                         yapabilen C# hesap makinesi.</p>
                     <a href="https://github.com/bugramete11/Hesap_Makinesi" target="_blank" class="github-repo-btn">
                         <i class="fab fa-github"></i> GitHub'da İncele
                     </a>
                 </div>
 
-            </div>
-
-        </section>
-        <!-- ZİYARETÇİ BİLGİLERİ BÖLÜMÜ -->
-        <section class="visitor-section hidden" id="visitor-info">
-            <h2><i class="fa-solid fa-eye"></i> Ziyaretçi Bilgileri</h2>
-
-            <div class="visitor-grid">
-                <!-- IP Adresi -->
-                <div class="visitor-card">
-                    <i class="fas fa-globe"></i>
-                    <span class="v-label">IP ADRESİ</span>
-                    <span class="v-value" id="visitor-ip">Yükleniyor...</span>
+                <!-- YENİ EKLENECEK KART: Not Hesaplama Sistemi -->
+                <div class="project-card">
+                    <h3>Not Hesaplama Sistemi</h3>
+                    <p>Vize, final ve harf notu hesaplamaları yapan, ağırlıklı ortalama ve geçme durumu analizi sunan
+                        uygulama.</p>
+                    <a href="https://github.com/bugramete11/NOT_HESAPLAMA_REPO_ADIN" target="_blank">
+                        <i class="fab fa-github"></i> GitHub'da İncele
+                    </a>
                 </div>
 
-                <!-- Konum -->
-                <div class="visitor-card">
+            </div> <!-- Projeler ızgarasını (grid) kapatan div -->
+        </section> <!-- Projelerim bölümünü kapatan etiket -->
+
+    </div>
+
+    </section>
+    <!-- ZİYARETÇİ BİLGİLERİ BÖLÜMÜ -->
+    <section class="visitor-section hidden" id="visitor-info">
+        <h2><i class="fa-solid fa-eye"></i> Ziyaretçi Bilgileri</h2>
+
+        <div class="visitor-grid">
+            <!-- IP Adresi -->
+            <div class="visitor-card">
+                <i class="fas fa-globe"></i>
+                <span class="v-label">IP ADRESİ</span>
+                <span class="v-value" id="visitor-ip">Yükleniyor...</span>
+            </div>
+
+            <!-- Konum -->
+            <div class="visitor-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="v-label">KONUM</span>
+                <span class="v-value" id="visitor-location">Yükleniyor...</span>
+            </div>
+
+            <!-- Tarayıcı -->
+            <div class="visitor-card">
+                <i class="fas fa-compass"></i>
+                <span class="v-label">TARAYICI</span>
+                <span class="v-value" id="visitor-browser">Tespit ediliyor...</span>
+            </div>
+
+            <!-- Cihaz -->
+            <div class="visitor-card">
+                <i class="fas fa-desktop"></i>
+                <span class="v-label">CİHAZ</span>
+                <span class="v-value" id="visitor-device">Tespit ediliyor...</span>
+            </div>
+
+            <!-- İşletim Sistemi -->
+            <div class="visitor-card">
+                <i class="fas fa-laptop"></i>
+                <span class="v-label">İŞLETİM SİSTEMİ</span>
+                <span class="v-value" id="visitor-os">Tespit ediliyor...</span>
+            </div>
+
+            <!-- Ekran Çözünürlüğü -->
+            <div class="visitor-card">
+                <i class="fas fa-expand"></i>
+                <span class="v-label">EKRAN</span>
+                <span class="v-value" id="visitor-screen">1920 × 1080</span>
+            </div>
+
+            <!-- Ziyaret Sayısı -->
+            <div class="visitor-card">
+                <i class="fas fa-eye"></i>
+                <span class="v-label">ZİYARET SAYISI</span>
+                <span class="v-value" id="visitor-count">1</span>
+            </div>
+
+            <!-- İlk Ziyaret / Tarih -->
+            <div class="visitor-card">
+                <i class="fas fa-clock"></i>
+                <span class="v-label">İLK ZİYARET</span>
+                <span class="v-value" id="visitor-date">18.08.2026</span>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section hidden">
+        <div class="contact-left">
+            <p>Benimle iletişime geçmek için aşağıdaki kanalları kullanabilirsiniz.</p>
+        </div>
+        <div class="contact-right">
+            <div class="contact-box">
+                <h3>İletişim Bilgileri</h3>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="bugratura11x@gmail.com">bugratura11x@gmail.com</a>
+                </div>
+                <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span class="v-label">KONUM</span>
-                    <span class="v-value" id="visitor-location">Yükleniyor...</span>
+                    <a href="https://maps.google.com/?q=Pazaryeri,Bilecik,Türkiye" target="_blank">Bilecik
+                        Pazaryeri, Türkiye</a>
                 </div>
+                <!-- En güncel FontAwesome v6 -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-                <!-- Tarayıcı -->
-                <div class="visitor-card">
-                    <i class="fas fa-compass"></i>
-                    <span class="v-label">TARAYICI</span>
-                    <span class="v-value" id="visitor-browser">Tespit ediliyor...</span>
-                </div>
+                <div class="social-icons">
+                    <!-- GitHub -->
+                    <a href="https://github.com/bugramete11" target="_blank" class="social-tooltip"
+                        data-tooltip="GitHub: bugramete11">
+                        <i class="fab fa-github"></i>
+                    </a>
 
-                <!-- Cihaz -->
-                <div class="visitor-card">
-                    <i class="fas fa-desktop"></i>
-                    <span class="v-label">CİHAZ</span>
-                    <span class="v-value" id="visitor-device">Tespit ediliyor...</span>
-                </div>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/bugramete_" target="_blank" class="social-tooltip"
+                        data-tooltip="Instagram: @bugramete_">
+                        <i class="fab fa-instagram"></i>
+                    </a>
 
-                <!-- İşletim Sistemi -->
-                <div class="visitor-card">
-                    <i class="fas fa-laptop"></i>
-                    <span class="v-label">İŞLETİM SİSTEMİ</span>
-                    <span class="v-value" id="visitor-os">Tespit ediliyor...</span>
-                </div>
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@bugramete_" target="_blank" class="social-tooltip"
+                        data-tooltip="TikTok: @bugramete_">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
 
-                <!-- Ekran Çözünürlüğü -->
-                <div class="visitor-card">
-                    <i class="fas fa-expand"></i>
-                    <span class="v-label">EKRAN</span>
-                    <span class="v-value" id="visitor-screen">1920 × 1080</span>
-                </div>
+                    <!-- Steam -->
+                    <a href="https://steamcommunity.com/profiles/76561199144981296/" target="_blank"
+                        class="social-tooltip" data-tooltip="steam: @bugra_mt">
+                        <i class="fab fa-steam"></i>
+                    </a>
 
-                <!-- Ziyaret Sayısı -->
-                <div class="visitor-card">
-                    <i class="fas fa-eye"></i>
-                    <span class="v-label">ZİYARET SAYISI</span>
-                    <span class="v-value" id="visitor-count">1</span>
-                </div>
 
-                <!-- İlk Ziyaret / Tarih -->
-                <div class="visitor-card">
-                    <i class="fas fa-clock"></i>
-                    <span class="v-label">İLK ZİYARET</span>
-                    <span class="v-value" id="visitor-date">18.08.2026</span>
                 </div>
             </div>
-        </section>
-        <section class="contact-section hidden">
-            <div class="contact-left">
-                <p>Benimle iletişime geçmek için aşağıdaki kanalları kullanabilirsiniz.</p>
-            </div>
-            <div class="contact-right">
-                <div class="contact-box">
-                    <h3>İletişim Bilgileri</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="bugratura11x@gmail.com">bugratura11x@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <a href="https://maps.google.com/?q=Pazaryeri,Bilecik,Türkiye" target="_blank">Bilecik
-                            Pazaryeri, Türkiye</a>
-                    </div>
-                    <!-- En güncel FontAwesome v6 -->
-                    <link rel="stylesheet"
-                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-                    <div class="social-icons">
-                        <!-- GitHub -->
-                        <a href="https://github.com/bugramete11" target="_blank" class="social-tooltip"
-                            data-tooltip="GitHub: bugramete11">
-                            <i class="fab fa-github"></i>
-                        </a>
-
-                        <!-- Instagram -->
-                        <a href="https://www.instagram.com/bugramete_" target="_blank" class="social-tooltip"
-                            data-tooltip="Instagram: @bugramete_">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-
-                        <!-- TikTok -->
-                        <a href="https://www.tiktok.com/@bugramete_" target="_blank" class="social-tooltip"
-                            data-tooltip="TikTok: @bugramete_">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-
-                        <!-- Steam -->
-                        <a href="https://steamcommunity.com/profiles/76561199144981296/" target="_blank"
-                            class="social-tooltip" data-tooltip="steam: @bugra_mt">
-                            <i class="fab fa-steam"></i>
-                        </a>
-
-
-                    </div>
-                </div>
-        </section>
+    </section>
 
     </div>
 
